@@ -10,10 +10,6 @@ resource "aws_db_instance" "rds" {
   password             = "minhasenha123" 
   parameter_group_name = "default.mysql8.0" 
 
-  skip_final_snapshot  = true # Não cria snapshot final após exclusão da instância
-  multi_az             = false # Não usa Multi-AZ (não há alta disponibilidade)
-  publicly_accessible  = false # Sem acesso público
-
   tags = {
     Name = "MeuBancoRDS"
   }
